@@ -9,7 +9,7 @@ const Header = () => {
         <IconLogo />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
