@@ -1,0 +1,80 @@
+@use '../styles/constants' as c;
+
+*,
+*:after,
+*:before {
+  font-family: 'Pretendard';
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #E1F2F0;
+}
+
+body {
+  font-size: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  max-width: c.$MOBILE_MAX_WIDTH;
+  margin: 0 auto; // 중앙 정렬
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+textarea,
+button {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin-top: 0;
+}
+
+pre {
+  font-family: 'Pretendard';
+}
+
+textarea {
+  resize: none;
+  height: 76px;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
