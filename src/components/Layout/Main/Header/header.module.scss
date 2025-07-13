@@ -2,6 +2,8 @@
 @use 'styles/mixins' as m;
 
 .wrapper {
+  @include m.flex;
   width: 100%;
+  height: c.$S_HEADER_HEIGHT;
   background-color: c.$C_WHITE;
 }
