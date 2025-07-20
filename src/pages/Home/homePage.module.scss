@@ -2,7 +2,8 @@
 @use '@/styles/mixins' as m;
 
 .wrapper {
-  @include m.flex;
+  @include m.flex(flex-start, flex-start, column);
+  gap: 16px;
   width: 100%;
   min-height: 100vh;
   background-color: c.$C_WHITE;
@@ -16,5 +17,10 @@
   > h2 {
     @include m.fontH2('medium');
     color: c.$C_BLUE_50;
+  }
+
+  .eventCard {
+    width: 150px;
+    height: 190px;
   }
 }

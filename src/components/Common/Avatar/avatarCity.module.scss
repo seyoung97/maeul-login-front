@@ -1,0 +1,49 @@
+@use '@/styles/constants' as c;
+@use '@/styles/mixins' as m;
+
+$XSMALL_SIZE: 24px;
+$SMALL_SIZE: 32px;
+$MEDIUM_SIZE: 40px;
+$LARGE_SIZE: 48px;
+$XLARGE_SIZE: 65px;
+
+.wrapper {
+  @include m.flex;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid c.$C_BORDER;
+  // background-color: var(--c-background-normal-normal);
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 10%);
+  object-fit: contain;
+
+  &.xsmall {
+    width: $XSMALL_SIZE;
+    height: $XSMALL_SIZE;
+  }
+
+  &.small {
+    width: $SMALL_SIZE;
+    height: $SMALL_SIZE;
+  }
+
+  &.medium {
+    width: $MEDIUM_SIZE;
+    height: $MEDIUM_SIZE;
+  }
+
+  &.large {
+    width: $LARGE_SIZE;
+    height: $LARGE_SIZE;
+  }
+
+  &.xlarge {
+    width: $XLARGE_SIZE;
+    height: $XLARGE_SIZE;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}

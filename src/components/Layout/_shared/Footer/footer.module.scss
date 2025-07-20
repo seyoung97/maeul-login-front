@@ -17,8 +17,6 @@
       height: 100%;
 
       > li {
-        // li 자체 스타일은 최소화
-
         > a {
           // NavLink는 <a> 태그로 렌더링됨
           @include m.flex(center, center, column);

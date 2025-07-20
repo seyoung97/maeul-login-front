@@ -1,0 +1,11 @@
+@use 'styles/constants' as c;
+@use 'styles/mixins' as m;
+
+.wrapper {
+  @include m.flex(center, center, column);
+  gap: 4px;
+
+  > span {
+    @include m.fontB2LH2('medium');
+  }
+}
