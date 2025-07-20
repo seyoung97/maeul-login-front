@@ -1,16 +1,19 @@
 import { useState } from 'react';
 
 import cx from 'clsx';
+import { useNavigate } from 'react-router-dom';
 
 import { IconHome, IconLocationPin, IconMyPage } from '@/assets/icons';
 
 import styles from './footer.module.scss';
 
 const Footer = () => {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const [activeItem, setActiveItem] = useState<string | null>('home');
 
   const handleItemClick = (itemName: string) => {
     setActiveItem(itemName === activeItem ? null : itemName);
+    navigate(`/${itemName}`);
   };
 
   return (

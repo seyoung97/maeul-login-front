@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from './mainPage.module.scss';
+import styles from './homePage.module.scss';
 
-const MainPage: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <main className={styles.wrapper}>
       <h1>@rldnd</h1>
@@ -11,4 +11,4 @@ const MainPage: React.FC = () => {
   );
 };
 
-export default MainPage;
+export default HomePage;
