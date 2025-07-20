@@ -1,12 +1,13 @@
 import React from 'react';
 
+import SolidPrimaryButton from '@/components/Common/Button/SolidPrimaryButton';
+
 import styles from './homePage.module.scss';
 
 const HomePage: React.FC = () => {
   return (
     <main className={styles.wrapper}>
-      <h1>@rldnd</h1>
-      <h2>vite-react-typescript</h2>
+      <SolidPrimaryButton size="large">test</SolidPrimaryButton>
     </main>
   );
 };

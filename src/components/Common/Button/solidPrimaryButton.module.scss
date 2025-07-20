@@ -1,0 +1,36 @@
+@use '@/styles/constants' as c;
+@use '@/styles/mixins' as m;
+
+.wrapper {
+  @include m.button-reset;
+  @include m.flex;
+  position: relative;
+  color: c.$C_WHITE;
+  background-color: c.$C_MAIN;
+
+  &:disabled {
+    color: var(--c-label-assistive);
+    background-color: var(--c-interaction-disable);
+  }
+
+  &.large {
+    @include m.fontB1LH1('medium');
+    gap: 6px;
+    padding: 12px 28px;
+    border-radius: 10px;
+  }
+
+  &.medium {
+    @include m.fontB1LH1('medium');
+    gap: 5px;
+    padding: 9px 20px;
+    border-radius: 8px;
+  }
+
+  &.small {
+    @include m.fontB2LH2('medium');
+    gap: 4px;
+    padding: 7px 14px;
+    border-radius: 6px;
+  }
+}
