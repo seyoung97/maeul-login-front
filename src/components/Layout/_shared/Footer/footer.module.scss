@@ -4,4 +4,40 @@
 .wrapper {
   width: 100%;
   background-color: c.$C_WHITE;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 10%);
+
+  > nav {
+    width: 100%;
+    height: 100%;
+    padding: 20px 36px;
+
+    > ul {
+      @include m.flex(space-between, center, row);
+      width: 100%;
+      height: 100%;
+
+      > li {
+        @include m.flex(center, center, column);
+        gap: 4px;
+        cursor: pointer;
+
+        > svg {
+          transition: filter 0.2s ease;
+        }
+
+        &.active {
+          > svg {
+            // stylelint-disable-next-line declaration-colon-newline-after
+            filter: brightness(0) saturate(100%) invert(78%) sepia(46%) saturate(2476%) hue-rotate(141deg)
+              brightness(97%) contrast(92%);
+          }
+        }
+
+        > span {
+          @include m.fontC3LH1(400);
+          transition: color 0.2s ease;
+        }
+      }
+    }
+  }
 }
