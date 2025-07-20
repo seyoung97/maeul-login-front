@@ -1,39 +1,34 @@
-import { useState } from 'react';
-
 import cx from 'clsx';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { IconHome, IconLocationPin, IconMyPage } from '@/assets/icons';
 
 import styles from './footer.module.scss';
 
 const Footer = () => {
-  const navigate = useNavigate();
-  const [activeItem, setActiveItem] = useState<string | null>('home');
-
-  const handleItemClick = (itemName: string) => {
-    setActiveItem(itemName === activeItem ? null : itemName);
-    navigate(`/${itemName}`);
-  };
-
   return (
     <footer className={styles.wrapper}>
       <nav>
         <ul>
-          <li className={cx({ [styles.active]: activeItem === 'mypage' })} onClick={() => handleItemClick('mypage')}>
-            <IconMyPage />
-            <span>마이페이지</span>
+          <li>
+            <NavLink to="/mypage" className={({ isActive }) => cx({ [styles.active]: isActive })}>
+              <IconMyPage />
+              <span>마이페이지</span>
+            </NavLink>
           </li>
-          <li className={cx({ [styles.active]: activeItem === 'home' })} onClick={() => handleItemClick('home')}>
-            <IconHome />
-            <span>홈</span>
+
+          <li>
+            <NavLink to="/home" className={({ isActive }) => cx({ [styles.active]: isActive })}>
+              <IconHome />
+              <span>홈</span>
+            </NavLink>
           </li>
-          <li
-            className={cx({ [styles.active]: activeItem === 'location' })}
-            onClick={() => handleItemClick('location')}
-          >
-            <IconLocationPin />
-            <span>전체 공고</span>
+
+          <li>
+            <NavLink to="/location" className={({ isActive }) => cx({ [styles.active]: isActive })}>
+              <IconLocationPin />
+              <span>전체 공고</span>
+            </NavLink>
           </li>
         </ul>
       </nav>

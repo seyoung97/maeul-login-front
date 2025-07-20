@@ -1,3 +1,4 @@
+export { ReactComponent as IconArrowLeft } from './arrowLeft.svg';
 export { ReactComponent as IconHome } from './Home.svg';
 export { ReactComponent as IconLocationPin } from './locationPin.svg';
 export { ReactComponent as IconLogo } from './logo.svg';

@@ -1,0 +1,9 @@
+@use '@/styles/constants' as c;
+@use '@/styles/mixins' as m;
+
+.wrapper {
+  @include m.flex(flex-start, flex-start, column);
+  width: 100%;
+  min-height: 100vh;
+  background-color: c.$C_WHITE;
+}

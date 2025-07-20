@@ -4,13 +4,11 @@ import { Outlet } from 'react-router-dom';
 
 import Footer from '../_shared/Footer/Footer';
 
-import Header from './Header';
-import styles from './layout.module.scss';
+import styles from './contentLayout.module.scss';
 
-const MainLayout = () => {
+const ContentLayout = () => {
   return (
     <div className={styles.wrapper}>
-      <Header />
       <main className={styles.main}>
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
@@ -21,4 +19,4 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
+export default ContentLayout;

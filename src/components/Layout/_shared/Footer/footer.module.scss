@@ -17,25 +17,32 @@
       height: 100%;
 
       > li {
-        @include m.flex(center, center, column);
-        gap: 4px;
-        cursor: pointer;
+        // li 자체 스타일은 최소화
 
-        > svg {
-          transition: filter 0.2s ease;
-        }
+        > a {
+          // NavLink는 <a> 태그로 렌더링됨
+          @include m.flex(center, center, column);
+          gap: 4px;
+          color: inherit; // 기본 링크 색상 제거
+          text-decoration: none; // 링크 밑줄 제거
+          cursor: pointer;
 
-        &.active {
           > svg {
-            // stylelint-disable-next-line declaration-colon-newline-after
-            filter: brightness(0) saturate(100%) invert(78%) sepia(46%) saturate(2476%) hue-rotate(141deg)
-              brightness(97%) contrast(92%);
+            transition: filter 0.2s ease;
           }
-        }
 
-        > span {
-          @include m.fontC3LH1(400);
-          transition: color 0.2s ease;
+          &.active {
+            > svg {
+              // stylelint-disable-next-line declaration-colon-newline-after
+              filter: brightness(0) saturate(100%) invert(78%) sepia(46%) saturate(2476%) hue-rotate(141deg)
+                brightness(97%) contrast(92%);
+            }
+          }
+
+          > span {
+            @include m.fontC3LH1(400);
+            transition: color 0.2s ease;
+          }
         }
       }
     }
